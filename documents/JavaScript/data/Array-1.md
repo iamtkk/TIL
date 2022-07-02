@@ -15,7 +15,7 @@ const found = array1.find(element => element > 10);
 console.log(found);
 
 // expected output: 
-12
+// 12
 ```
 - Array.prototype.find()
 - ```find()``` 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.
@@ -29,10 +29,10 @@ console.log([1,2].length)
 console.log([].length)
 
 // expected output: 
-4
-3
-2
-0
+// 4
+// 3
+// 2
+// 0
 ```
 
 # .concat()
@@ -42,9 +42,9 @@ console.log(numbers)
 console.log(fruits)
 
 // expected output: 
-[ 1, 2, 3, 4, 'Apple', 'Banana', 'Cherry' ]
-[ 1, 2, 3, 4 ]
-[ 'Apple', 'Banana', 'Cherry' ]
+// [ 1, 2, 3, 4, 'Apple', 'Banana', 'Cherry' ]
+// [ 1, 2, 3, 4 ]
+// [ 'Apple', 'Banana', 'Cherry' ]
 ```
 - 두개의 배열 데이터를 병합해서 새로운 배열을 생성해준다
 - concat을 사용해도 원본의 배열 데이터가 수정되지 않는다
@@ -56,9 +56,9 @@ fruits.forEach(function(element,index,array){ // 메서드의 인수로 사용�
 })
 
 // expected output: 
-Apple 0 [ 'Apple', 'Banana', 'Cherry' ]
-Banana 1 [ 'Apple', 'Banana', 'Cherry' ]
-Cherry 2 [ 'Apple', 'Banana', 'Cherry' ]
+// Apple 0 [ 'Apple', 'Banana', 'Cherry' ]
+// Banana 1 [ 'Apple', 'Banana', 'Cherry' ]
+// Cherry 2 [ 'Apple', 'Banana', 'Cherry' ]
 
 ------------------------------------------------------
 const a = fruits.forEach(function(fruit,index){
@@ -67,10 +67,10 @@ const a = fruits.forEach(function(fruit,index){
 console.log(a)
 
 // expected output: 
-Apple-0
-Banana-1
-Cherry-2
-undefined // forEach가 변수 a에 따로 반환한 값이 없기 때문에 undefined로 출력됨
+// Apple-0
+// Banana-1
+// Cherry-2
+// undefined // forEach가 변수 a에 따로 반환한 값이 없기 때문에 undefined로 출력됨
 ```
 
 # .map()
@@ -93,11 +93,11 @@ console.log(c)
 console.log(d)
 
 // expected output: 
-[ 'Apple-0', 'Banana-1', 'Cherry-2' ]
-[ 'Apple-0', 'Banana-1', 'Cherry-2' ]
-[
-  { id: 0, name: 'Apple' },
-  { id: 1, name: 'Banana' },
-  { id: 2, name: 'Cherry' }
-]
+// [ 'Apple-0', 'Banana-1', 'Cherry-2' ]
+// [ 'Apple-0', 'Banana-1', 'Cherry-2' ]
+// [
+//  { id: 0, name: 'Apple' },
+//  { id: 1, name: 'Banana' },
+//  { id: 2, name: 'Cherry' }
+// ]
 ```

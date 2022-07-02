@@ -15,7 +15,9 @@ const iamtk = {
 }
 
 iamtk.normal();  // 소괄호가 붙는다는것은 호출이다
+// expected output: Taekwan
 iamtk.arrow();
+// expected output: undefined
 
 const amy = {
     name: 'Amy',
@@ -24,13 +26,10 @@ const amy = {
 }
 
 amy.normal();
+// expected output: Taekwan
 amy.arrow();
+// expected output: undefined
 
-----------------------------------------------
-Taekwan
-undefined
-Amy
-undefined
 ```
 - normal()은 호출 위치 즉 amy 객체가 this가 된다.
 
@@ -52,11 +51,10 @@ User.prototype.arrow = ()=>{
 
 const iamtk = new User('Taekwan')
 iamtk.normal()
+// expected output: Taekwan
 iamtk.arrow()
+// expected output: undefined
 
----------------------------------------------
-Taekwan
-undefined
 ```
 - 생성자 함수로 정의하여도 결과는 마찬가지다.
 
@@ -75,9 +73,8 @@ const timer = {
 }
 
 timer.timeout()
+// expected output: undefined
 
---------------------------------------------
-undefined
 ```
 - setTimout의 함수 매개변수를 일반함수로 정의
 - setTimeout에서 호출되기 때문에 this.name은 undefined가 된다.
@@ -97,9 +94,7 @@ const timer = {
 }
 
 timer.timeout()
-
---------------------------------------------
-Iamtk!!
+// expected output: Iamtk!!
 ```
 - setTimout의 함수 매개변수를 화살표 함수로 정의
 - setTimeout 함수를 호출하는 곳은 timeout이므로 정상적인 값을불러올 수 있다.

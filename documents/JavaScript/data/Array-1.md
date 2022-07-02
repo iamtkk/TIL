@@ -7,8 +7,6 @@ console.log(numbers[1])
 console.log(fruits[2])
 ```
 - [MDN : Array](https://developer.mozilla.org/ko/docs/Web/JavaScript/Reference/Global_Objects/Array)
-- Array.prototype.find()
--  ```find()``` 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.
 
 # .find()
 ```javascript
@@ -19,6 +17,8 @@ console.log(found);
 // expected output: 
 12
 ```
+- Array.prototype.find()
+- ```find()``` 메서드는 주어진 판별 함수를 만족하는 첫 번째 요소의 값을 반환합니다. 그런 요소가 없다면 undefined를 반환합니다.
 - find 메서드는 callback 함수가 참을 반환 할 때까지 해당 배열의 각 요소에 대해서 callback 함수를 실행합니다.
 
 # .length

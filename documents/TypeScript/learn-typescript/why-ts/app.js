@@ -1,5 +1,5 @@
 // api url
-var url = 'https://jsonplaceholder.typicode.com/users';
+var url = 'https://jsonplaceholder.typicode.com/users/1';
 
 // dom
 var username = document.querySelector('#username');
@@ -9,9 +9,22 @@ var address = document.querySelector('#address');
 // user data
 var user = {};
 
+/**
+ * 
+ */
+
+/**
+ * @returns {Promise<User>}
+ */
+function fetchUser(){
+  return axios.get(url);
+}
+
+
 function startApp() {
-  axios
-    .get(url)
+  // axios
+  //   .get(url)
+  fetchUser()
     .then(function (response) {
       // console.log(response);
       user = response.data;
@@ -21,7 +34,7 @@ function startApp() {
       // username.innerText는 document.querySelector('#username');에서 가져온 객체의 text 값이다.
       // 현재는 빈값이지만 user[0].name으 대입하여 화면에 출력한다. 
       email.innerText = user[0].email;
-      address.innerText = user[0].address;
+      address.innerText = user[0].address.street;
     })
     .catch(function (error) {
       console.log(error);

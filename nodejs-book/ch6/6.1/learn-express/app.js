@@ -6,6 +6,7 @@ app.set('port', process.env.PORT || 3000);
 
 app.get('/', (req, res) => {
   // res.send('Hello, Express');
+  console.log(__dirname);
   res.sendFile(path.join(__dirname, '/index.html'));
 });
 
